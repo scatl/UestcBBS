@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/menu_user_detail_user_detail"
+        android:title="查看详细资料"
+        app:showAsAction="never"
+
+        />
+
+    <item
+        android:id="@+id/menu_user_detail_add_to_black"
+        android:title="加入黑名单"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_user_detail_report_user"
+        android:title="举报用户"
+        app:showAsAction="never" />
+
+
+
+</menu>

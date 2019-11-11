@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreatePostActivity"
+    android:id="@+id/create_post_coorlayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/create_post_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/create_post_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:background="?attr/toolbar_color">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@id/create_post_app_bar"
+            android:layout_above="@id/create_post_options_rl"
+            >
+
+            <RelativeLayout
+                android:id="@+id/create_post_rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <TextView
+                    android:id="@+id/text17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择板块："
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/create_post_board_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/text17"
+                    android:textSize="16sp"
+                    android:text="点击选择板块"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textColor="@color/colorPrimary"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/create_post_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text17"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:hint="请输入标题"
+                    android:background="@null"
+                    android:textSize="18sp"
+                    />
+
+                <com.scatl.uestcbbs.custom.posteditor.ContentEditor
+                    android:id="@+id/create_post_content_editor"
+                    android:layout_below="@id/create_post_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/create_post_options_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_dark"
+            >
+
+            <RelativeLayout
+                android:id="@+id/create_post_rl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/create_post_emotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_emotion_send_msg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/create_post_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_at"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_toEndOf="@id/create_post_emotion"
+                    android:layout_marginStart="15dp" />
+
+                <ImageView
+                    android:id="@+id/create_post_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_photo"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_toEndOf="@id/create_post_at"
+                    android:layout_marginStart="15dp" />
+
+                <ImageView
+                    android:id="@+id/create_post_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_send"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
+
+            </RelativeLayout>
+
+            <com.scatl.uestcbbs.custom.emoticon.EmoticonPanelLayout
+                android:id="@+id/create_post_emotion_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/create_post_rl2"
+                android:visibility="gone"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

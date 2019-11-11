@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DailyPicActivity">
+
+
+    <ImageView
+        android:id="@+id/daily_picture_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="1dp"
+        />
+
+    <TextView
+        android:id="@+id/daily_pic_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:textColor="#fff"
+        android:elevation="2dp"
+        android:visibility="visible"
+
+        />
+
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        >
+    </View>
+
+
+    <ImageView
+        android:id="@+id/daily_pic_back"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/ic_back"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/view5"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+    <ImageView
+        android:id="@+id/daily_pic_download"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:src="@drawable/ic_file_download"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/daily_pic_back"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="2dp"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+</RelativeLayout>

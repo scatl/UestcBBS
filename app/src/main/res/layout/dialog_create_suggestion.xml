@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp">
+
+
+    <EditText
+        android:id="@+id/dialog_create_suggestion_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|bottom"
+        android:inputType="textMultiLine"
+        android:hint="请输入内容" />
+
+    <TextView
+        android:id="@+id/dialog_create_suggestion_hint"
+        android:layout_below="@id/dialog_create_suggestion_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimary"/>
+
+
+</RelativeLayout>

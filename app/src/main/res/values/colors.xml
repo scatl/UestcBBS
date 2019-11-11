@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5F7C8A</color>
+    <color name="colorPrimaryDark">#5F7C8A</color>
+    <color name="colorAccent">#5F7C8A</color>
+
+    <color name="color_primary">#5F7C8A</color>
+    <color name="color_primary_dark">#5F7C8A</color>
+    <color name="color_accent">#5F7C8A</color>
+    <color name="color_primary_light">#D7E0E4</color>
+
+    <color name="toolbar_color">#5F7C8A</color>
+    <color name="statusbar_color">#5F7C8A</color>
+
+    <color name="text_color">#000000</color>
+    <color name="text_color_dark">#757575</color>
+    <color name="line_color">#ECECEC</color>
+
+    <color name="background_dark_very">#e5e5e5</color>
+    <color name="background_dark_1">#f0f0f0</color>
+    <color name="background_dark">#f0f0f0</color>
+    <color name="background_light">#ffffff</color>
+
+    <color name="ic_launcher_icon1_background">#3594F2</color>
+</resources>

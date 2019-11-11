@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/post_detail_cardview1"
+    app:cardBackgroundColor="@color/background_light"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/post_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/text_color"
+            />
+
+        <RelativeLayout
+            android:id="@+id/post_detail_rl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_detail_title"
+            android:layout_marginTop="15dp"
+            >
+            <com.scatl.uestcbbs.custom.imageview.CircleImageView
+                android:id="@+id/post_detail_author_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <TextView
+                android:id="@+id/post_detail_author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/post_detail_author_avatar"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/post_detail_author_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/post_detail_author_name"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+            <TextView
+                android:id="@+id/post_detail_author_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/post_detail_author_avatar"
+                android:layout_below="@id/post_detail_author_name"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                />
+
+            <ImageView
+                android:id="@+id/post_detail_favorite"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_not_favorite"
+                />
+
+        </RelativeLayout>
+
+        <com.scatl.uestcbbs.custom.postview.ContentView
+            android:id="@+id/post_detail_rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_detail_rl1"
+            android:layout_marginTop="5dp"
+            >
+
+        </com.scatl.uestcbbs.custom.postview.ContentView>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

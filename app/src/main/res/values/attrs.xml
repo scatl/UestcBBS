@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="color_primary" format="color|reference"/>
+    <attr name="color_primary_dark" format="color|reference"/>
+    <attr name="color_accent" format="color|reference"/>
+
+    <attr name="toolbar_color" format="color|reference"/>
+    <attr name="statusbar_color" format="color|reference"/>
+
+    <attr name="text_color" format="color|reference"/>
+    <attr name="text_color_dark" format="color|reference"/>
+    <attr name="line_color" format="color|reference"/>
+
+    <attr name="background_dark_very" format="color|reference"/>
+    <attr name="background_dark" format="color|reference"/>
+    <attr name="background_dark_1" format="color|reference"/>
+    <attr name="background_light" format="color|reference"/>
+
+</resources>

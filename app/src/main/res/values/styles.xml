@@ -1,0 +1,53 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="color_primary">@color/colorPrimary</item>
+        <item name="color_primary_dark">@color/colorPrimary</item>
+        <item name="color_accent">@color/colorPrimary</item>
+
+        <item name="toolbar_color">@color/toolbar_color</item>
+        <item name="statusbar_color">@color/statusbar_color</item>
+
+        <item name="text_color">@color/text_color</item>
+        <item name="text_color_dark">@color/text_color_dark</item>
+        <item name="line_color">@color/line_color</item>
+
+        <item name="background_dark_very">@color/background_dark_very</item>
+        <item name="background_dark">@color/background_dark</item>
+        <item name="background_dark_1">@color/background_dark_1</item>
+        <item name="background_light">@color/background_light</item>
+
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!--<style name="comment_dialog" parent="@android:style/Theme.Dialog">-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:windowBackground">@android:color/white</item>-->
+        <!--<item name="android:backgroundDimEnabled">true</item>-->
+    <!--</style>-->
+
+    <style name="WindowAnimationFadeInOut">
+        <item name="android:windowEnterAnimation">@anim/switch_night_mode_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/switch_night_mode_fade_out</item>
+    </style>
+
+
+
+</resources>

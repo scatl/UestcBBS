@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:minHeight="200dp">
+
+            <TextView
+                android:id="@+id/text15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:text="选择板块类型"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/dialog_select_board_and_cat_tag_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text15"
+                android:layout_marginTop="15dp"
+                app:max_select="1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+            <TextView
+                android:id="@+id/text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:text="选择父板块"
+                android:layout_below="@id/dialog_select_board_and_cat_tag_layout1"
+                android:layout_marginTop="15dp"
+                />
+
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/dialog_select_board_and_cat_tag_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text16"
+                android:layout_marginTop="15dp"
+                app:max_select="1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+            <TextView
+                android:id="@+id/text18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:text="选择子板块"
+                android:layout_below="@id/dialog_select_board_and_cat_tag_layout2"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/text21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="3dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignBaseline="@id/text18"
+                android:layout_toEndOf="@id/text18"
+                android:layout_below="@id/dialog_select_board_and_cat_tag_layout2"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/dialog_select_board_and_cat_tag_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text18"
+                android:layout_marginTop="15dp"
+                app:max_select="1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+            <TextView
+                android:id="@+id/text19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"
+                android:text="选择板块分类"
+                android:layout_below="@id/dialog_select_board_and_cat_tag_layout3"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/text20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="3dp"
+                android:layout_alignBaseline="@id/text19"
+                android:layout_toEndOf="@id/text19"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/dialog_select_board_and_cat_tag_layout3"/>
+
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/dialog_select_board_and_cat_tag_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text19"
+                android:layout_marginTop="15dp"
+                app:max_select="1">
+
+            </com.zhy.view.flowlayout.TagFlowLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

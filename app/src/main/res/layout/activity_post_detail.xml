@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PostDetailActivity"
+    android:id="@+id/post_detail_coorlayout">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!--设置了layerType后cardview没有阴影效果，给布局加个背景以突出cardview-->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/post_detail_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/post_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:background="?attr/toolbar_color">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/post_detail_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/post_detail_app_bar"
+            android:background="@color/background_dark"
+            >
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/pose_detail_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                android:layerType="software"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <include
+                        android:id="@+id/post_detail_view"
+                        layout="@layout/view_post_detail"/>
+
+                    <include
+                        android:id="@+id/post_detail_sticky_root_view"
+                        layout="@layout/view_post_detail_sticky" />
+
+                    <include
+                        android:id="@+id/post_detail_reply_view"
+                        layout="@layout/view_post_detail_reply"/>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/post_detail_up_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/post_detail_create_comment_btn"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_arrow_up"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/post_detail_create_comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_create"
+            app:fab_size="mini"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"/>
+
+        <!--占位用的，用来添加第二个cardview-->
+        <LinearLayout
+            android:id="@+id/zhanwei_linearlayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/post_detail_app_bar">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/post_detail_error_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <ImageView
+                android:id="@+id/post_detail_error_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_error"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/post_detail_error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_detail_error_img"
+                android:layout_marginTop="5dp"
+                android:layout_centerInParent="true"
+                android:textSize="17sp"
+                android:text="啊哦，获取数据失败，点我刷新"
+                android:layout_marginStart="100dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/post_detail_webview_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/post_detail_app_bar"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

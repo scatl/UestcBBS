@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基本信息"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                />
+
+            <TextView
+                android:id="@+id/dialog_user_info_basic_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text6"
+                android:layout_marginTop="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="财富信息"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                android:layout_below="@id/dialog_user_info_basic_info"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/dialog_user_info_property_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text7"
+                android:layout_marginTop="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="15sp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

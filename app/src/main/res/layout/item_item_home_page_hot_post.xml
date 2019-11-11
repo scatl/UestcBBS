@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/main_page_hot_post_cardview"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/main_page_hot_post_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <com.scatl.uestcbbs.custom.imageview.CircleImageView
+            android:id="@+id/main_page_hot_post_user_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/main_page_hot_post_user_name"
+            android:layout_toEndOf="@id/main_page_hot_post_user_avatar"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/main_page_hot_post_post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_hot_post_user_avatar"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            />
+
+        <TextView
+            android:id="@+id/main_page_hot_post_post_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_hot_post_post_title"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/main_page_hot_post_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_hot_post_user_name"
+            android:layout_toEndOf="@id/main_page_hot_post_user_avatar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/main_page_hot_post_post_content"
+            android:layout_marginTop="15dp"
+            android:layout_toStartOf="@id/main_page_hot_post_comments_count"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_comment"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/main_page_hot_post_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_hot_post_post_content"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/main_page_hot_post_watch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_hot_post_post_content"
+            android:layout_marginTop="17dp"
+            android:layout_toStartOf="@id/main_page_hot_post_comments_count"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/main_page_hot_post_board_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_hot_post_post_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="15sp"
+    app:cardElevation="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/card_view_item_post"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <com.scatl.uestcbbs.custom.imageview.CircleImageView
+            android:id="@+id/item_post_user_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:id="@+id/item_post_user_name"
+            android:layout_toEndOf="@id/item_post_user_avatar"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            />
+
+
+        <TextView
+            android:id="@+id/item_post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_post_user_avatar"
+            android:layout_marginTop="10dp"
+            android:textSize="17sp"
+            android:textColor="@color/text_color"
+            />
+
+        <TextView
+            android:id="@+id/item_post_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_post_title"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/item_post_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_post_user_name"
+            android:layout_toEndOf="@id/item_post_user_avatar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/item_post_board_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            />
+
+
+        <TextView
+            android:id="@+id/item_post_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_post_content"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="35dp"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/item_post_view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_post_content"
+            android:layout_marginTop="17dp"
+            android:layout_toStartOf="@id/item_post_comments_count"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/item_post_poll_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_post_content"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:id="@+id/item_post_poll_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_poll"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投票帖"
+                android:layout_toEndOf="@id/item_post_poll_icon"
+                android:layout_marginStart="3dp"
+                android:layout_alignBottom="@id/item_post_poll_icon"/>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

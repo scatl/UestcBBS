@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.UserDetailActivity"
+    android:id="@+id/user_detail_coorlayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/user_detail_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/user_detail_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:statusBarScrim="#00ffffff"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/user_detail_toolbar"
+            app:titleEnabled="false"
+            android:fitsSystemWindows="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/user_detail_user_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:fitsSystemWindows="true"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/user_detail_rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:visibility="gone"
+                    >
+
+                    <com.scatl.uestcbbs.custom.imageview.CircleImageView
+                        android:id="@+id/user_detail_user_icon"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="20dp"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <Button
+                        android:id="@+id/user_detail_favorite_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="关注"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/user_detail_mail_btn"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/shape_user_detail_favorite_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/user_detail_mail_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_mail"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="30dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:background="@drawable/shape_user_detail_mail_btn"
+                        style="?android:attr/borderlessButtonStyle"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/user_detail_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/user_detail_rl1"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:textColor="#fff"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
+
+                <TextView
+                    android:id="@+id/user_detail_user_sign"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/user_detail_user_name"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:id="@+id/user_detail_follow_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/user_detail_user_sign"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:id="@+id/user_detail_followed_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/user_detail_follow_num"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/user_detail_user_sign"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:id="@+id/user_detail_user_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/user_detail_follow_num"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:id="@+id/user_detail_user_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_below="@id/user_detail_follow_num"
+                    android:layout_toEndOf="@id/user_detail_user_level"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/user_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title=" "
+                android:background="#00ffffff">
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/user_detail_indicator_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/user_detail_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/user_detail_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_detail_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:textSize="17sp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
