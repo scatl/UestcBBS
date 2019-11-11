@@ -10,7 +10,6 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -44,7 +43,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * author: sca_tl
- * description: 图文混排编辑器
+ * description: 图文混排编辑器，改自于：https://github.com/scatl/XRichText
  */
 public class ContentEditor extends ScrollView {
 
@@ -383,7 +382,6 @@ public class ContentEditor extends ScrollView {
 		ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);
 		spannableString.setSpan(imageSpan, 0, emotion_name.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 		lastFocusEdit.getText().insert(lastFocusEdit.getSelectionStart(), spannableString);
-		Log.e("TTTTTTTTTTT", spannableString.toString());
 	}
 
 	/**
@@ -569,7 +567,7 @@ public class ContentEditor extends ScrollView {
 
 	/**
 	 * author: sca_tl
-	 * description: 异步方式显示数据，由于没有开发草稿箱功能，所以暂时用不到
+	 * description: 异步方式显示数据
 	 */
 	public void setEditorData(final String content) {
 		rootLayout.removeAllViews();

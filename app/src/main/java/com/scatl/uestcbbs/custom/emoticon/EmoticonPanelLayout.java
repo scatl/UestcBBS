@@ -3,7 +3,6 @@ package com.scatl.uestcbbs.custom.emoticon;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -46,32 +45,24 @@ public class EmoticonPanelLayout extends RelativeLayout {
 
     public EmoticonPanelLayout(Context context) {
         super(context);
-        //init();
     }
 
     public EmoticonPanelLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        //init();
-    }
+        super(context, attrs); }
 
     public EmoticonPanelLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        //init();
     }
 
 
     public EmoticonPanelLayout init() {
-        //setVisibility(VISIBLE);
         inflater = LayoutInflater.from(getContext());
         RelativeLayout root_view = (RelativeLayout) inflater.inflate(R.layout.view_emoticon_panel_root, new RelativeLayout(getContext()));
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, DeviceConfig.KEYBOARD_HEIGHT);
-        //layoutParams.bottomMargin = CommonUtil.dip2px(getContext(), 10);
         root_view.setLayoutParams(layoutParams);
         viewPager = root_view.findViewById(R.id.view_emoticon_panel_pager);
         indicator = root_view.findViewById(R.id.view_emoticon_panel_indicator);
         hint = root_view.findViewById(R.id.view_emoticon_panel_hint);
-        //RelativeLayout trans = root_view.findViewById(R.id.view_emoticon_panel_trans_view);
-        //RelativeLayout panel_rl = root_view.fb
         initEmoticonPanel();
         addView(root_view);
 
@@ -133,7 +124,6 @@ public class EmoticonPanelLayout extends RelativeLayout {
         final List<View> gridViewList = new ArrayList<>();
         final List<String> title_img_path = new ArrayList<>();
 
-        //Set<String> strings = SharePrefUtil.getDownloadedEmoticon(getContext());
         List<String> list = new ArrayList<>(SharePrefUtil.getDownloadedEmoticon(getContext()));
         if (list.size() == 0) {
             hint.setText(getResources().getString(R.string.download_emoticon));
@@ -146,7 +136,6 @@ public class EmoticonPanelLayout extends RelativeLayout {
                     File[] files = file.listFiles();
                     for (int i = 0; i < files.length; i ++) {
                         img_path.add(files[i].getAbsolutePath());
-                        Log.e("UUUUUUUUUUU", img_path.get(i));
                     }
 
 
@@ -159,8 +148,6 @@ public class EmoticonPanelLayout extends RelativeLayout {
                     gridViewList.add(gridView);
                     title_img_path.add(img_path.get(0));
                 }
-
-
 
             }
 
