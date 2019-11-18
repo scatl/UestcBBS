@@ -4,9 +4,7 @@ import android.app.Application;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.scatl.uestcbbs.utils.Constants;
 import com.scatl.uestcbbs.utils.SharePrefUtil;
-import com.tencent.bugly.crashreport.CrashReport;
 
 public class MyApplication extends Application {
     @Override
@@ -19,7 +17,8 @@ public class MyApplication extends Application {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
-        CrashReport.initCrashReport(getApplicationContext(), Constants.BUGLY_ID, true);
+        //todo
+        //CrashReport.initCrashReport(getApplicationContext(), Constants.BUGLY_ID, true);
 
     }
 

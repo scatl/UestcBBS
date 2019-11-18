@@ -4,9 +4,9 @@
     <!---->
     <string name="user_name">用户名</string>
     <string name="user_psw">密码</string>
-    <string name="login_text">登陆</string>
+    <string name="login_text">登录</string>
     <string name="register_text">注册</string>
-    <string name="login_error">登陆失败：%1$s</string>
+    <string name="login_error">登录失败：%1$s</string>
     <string name="login_welcome">欢迎回来：%1$s</string>
 
     <string name="daily_pic">每日一图</string>
@@ -17,7 +17,7 @@
     <string name="forum_list_title">板块列表</string>
     <string name="notification_title">消息通知</string>
     <string name="mine_title">我的</string>
-    <string name="login_btn_text">登陆</string>
+    <string name="login_btn_text">登录</string>
 
     <!---->
     <string name="reply_time">%1$s%2$s前有回复</string>

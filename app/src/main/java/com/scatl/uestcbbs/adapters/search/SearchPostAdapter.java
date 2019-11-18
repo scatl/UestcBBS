@@ -30,11 +30,7 @@ public class SearchPostAdapter extends BaseQuickAdapter<SearchPostBean.ListBean,
     }
 
     public void addSearchPostData(List<SearchPostBean.ListBean> data, boolean refresh) {
-        if (refresh) {
-            setNewData(data);
-        } else {
-            addData(data);
-        }
+        if (refresh) { setNewData(data); } else { addData(data); }
     }
 
     @Override

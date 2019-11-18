@@ -217,7 +217,6 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
                 }
             }
         });
-
     }
 
     /**
@@ -312,5 +311,10 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
