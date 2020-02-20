@@ -1,5 +1,5 @@
 # UestcBBS
-电子科技大学清水河畔安卓客户端
+电子科技大学清水河畔安卓客户端<br/>
 该项目不再维护，请移步至https://github.com/scatl/UestcBBS-MVP
 
 # 截图
